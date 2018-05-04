@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:line-width="http://www.w3.org/1999/xhtml" xmlns:width="http://www.w3.org/1999/xhtml">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Departmental Store Management System</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     <link href="/static/css/style_signup.css" rel="stylesheet">
+       <link href="/static/css/style_navbar.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/du_booking_system.css" rel="stylesheet">
+
+
+
+
+
+  </head>
+
+  <body id="header" style="height: 100%">
+
+   <script type="text/javascript">
+			var nav = false;
+		function show_hide_nav(id){
+			var navbar = document.getElementById(id);
+
+			if(nav == false){
+				navbar.style.display = "block";
+				nav = true;
+			}else{
+				navbar.style.display = "none";
+				nav = false;
+			}
+		}
+	</script>
+
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+
+        <a class="navbar-brand" style="color:  white;" >Departmental Information Management System</a>
+
+        <div class="topnav" id="navbarResponsive" >
+            <div id="res_btn" onclick="show_hide_nav('navbar')" ></div>
+          <ul class="nav navbar-nav" id="navbar" style="margin-left: 380px ;color: #004085">
+           <a href="index" class="btn btn-primary" style="width: 120px;height: 40px">Home</a>
+          <a href="product" class="btn btn-primary" style="width: 120px;height: 40px">Update</a>
+          </ul>
+
+        </div>
+
+      </div>
+
+         <div class="btn-group-vertical">
+             {% if session.logged_in %}
+             <a href="logout" class="btn btn-danger navbar-btn"  >Logout</a>
+             {% else %}
+             <a href="login" class="btn btn-danger navbar-btn"  >Login</a>
+             <a class="btn btn-warning navbar-btn" href="signup">SignUp</a>
+             {% endif %}
+         </div>
+
+    </nav>
+
+ </body>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark"style="margin-top: 600px">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Departmental Store management System</p>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+</html>

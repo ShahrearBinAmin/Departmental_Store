@@ -1,0 +1,14 @@
+
+			*{margin: 0px;padding: 0px;}
+			body2{background: #FFC300;}
+			#header4{width: 100%;height: 50px;background: white;box-shadow: 2px 2px 4px white;}
+			#navbar4{width:880px;height: 50px;margin: 0px auto;}
+
+			li3>a{text-decoration: white;color: white;font-family: Verdana;font-size: 17px;line-height: 50px;display: block;text-align: center;}
+			li3>a:hover,
+			li3>a:focus{background:#FFC300 ;color: #333;}
+
+          .topnav a.active {
+             border-bottom: 3px solid #FFC300;
+          }
+

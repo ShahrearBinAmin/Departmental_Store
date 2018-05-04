@@ -1,0 +1,19 @@
+
+table tr{
+    text-align: center;
+}
+.clickable-row {
+    cursor:pointer;
+}
+
+.clickable-row:hover {
+    background-color: #ddd;
+}
+.du_img{
+    height: 40px;
+    width: 40px;
+}
+
+.detail{
+    font-size: medium;
+}

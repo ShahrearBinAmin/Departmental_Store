@@ -1,0 +1,630 @@
+    html,
+    body,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    dl,
+    dt,
+    dd,
+    ol,
+    nav li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+
+
+
+    blockquote,
+    q {
+        quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+
+        content: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    /*--start editing from here--*/
+
+    a {
+        text-decoration: none;
+    }
+
+    .txt-rt {
+        text-align: right;
+    }
+    /* text align right */
+
+    .txt-lt {
+        text-align: left;
+    }
+    /* text align left */
+
+    .txt-center {
+        text-align: center;
+    }
+    /* text align center */
+
+    .float-rt {
+        float: right;
+    }
+    /* float right */
+
+    .float-lt {
+        float: left;
+    }
+    /* float left */
+
+    .clear {
+        clear: both;
+    }
+    /* clear float */
+
+    .pos-relative {
+        position: relative;
+    }
+    /* Position Relative */
+
+    .pos-absolute {
+        position: absolute;
+    }
+    /* Position Absolute */
+
+    .vertical-base {
+        vertical-align: baseline;
+    }
+    /* vertical align baseline */
+
+    .vertical-top {
+        vertical-align: top;
+    }
+    /* vertical align top */
+
+
+
+    img {
+        max-width: 100%;
+    }
+    /*--end reset--*/
+
+    body1 {
+        font-family: 'PT Sans', sans-serif;
+        background: url(/static/img/bg.jpg);
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-attachment: fixed;
+        text-align: center;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .clearfix {
+        clear: both;
+    }
+    /**** LOGIN_SIGNUP ******/
+
+    h1.wthree {
+        text-transform: capitalize;
+        font-size: 3em;
+        text-align: center;
+        color: #fff;
+        margin: 0.5em 0;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    /* signup Form styles */
+
+    .login-section-agileits {
+        position: relative;
+        width: 30%;
+        margin: 3.3em auto 3.5em;
+        padding: 2.5em 1em;
+        background: rgba(255, 255, 255, 0.48);
+    }
+
+    .w3ls-icon {
+        margin-bottom: 2em;
+    }
+
+   
+    .wthree-left-txt {
+        padding: 1.2em 2em 2em;
+    }
+
+    .w3ls-icon span {
+        color: #00bcd4;
+        font-size: 1.1em;
+        padding: 14px;
+        width: 31px;
+        height: 18px;
+
+
+}
+
+
+    .w3ls-icon:nth-of-type(1) span {
+        color: #4ddba6;
+    }
+
+    .w3ls-icon:nth-of-type(2) span {
+        color: #eb5273;
+    }
+
+    .w3ls-icon:nth-of-type(3) span {
+        color: #00b9ef;
+    }
+
+    .w3ls-icon:nth-of-type(4) span {
+        color: #fc7e46;
+    }
+     .w3ls-icon:nth-of-type(5) span {
+        color: #9B59B6;
+    }
+     .w3ls-icon:nth-of-type(6) span {
+        color:#45B39D ;
+    }
+       .w3ls-icon:nth-of-type(7) span {
+        color: #EB984E ;
+    }
+      .login-section-agileits select[type="choose"],
+     .login-section-agileits input[type="dept"],
+    .login-section-agileits input[type="tel"],
+    .login-section-agileits input[type="text"],
+    .login-section-agileits input[type="password"],
+    .login-section-agileits input[type="email"] {
+        width: 79%;
+        padding: 0.85em 1em;
+        border: none;
+        outline: none;
+        color: #17202A  ;
+        font-size: 1em;
+        letter-spacing: 1px;
+        background: #FBFCFC   ;
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -o-transition: 0.5s all;
+
+        -moz-transition: 0.5s all;
+        font-family: 'PT Sans', sans-serif;
+    }
+
+    .login-section-agileits input[type="text"] {
+        background:  #FBFCFC    ;
+    }
+
+    .login-section-agileits input[type="password"] {
+        background:  #FBFCFC    ;
+    }
+
+    .w3ls-icon input[type="password"]#password2 {
+        background:#FBFCFC   ;
+    }
+
+    .login-section-agileits input[type="email"] {
+        background:  #FBFCFC   ;
+    }
+
+     .login-section-agileits input[type="tel"] {
+        background:  #FBFCFC   ;
+    }
+      .login-section-agileits input[type="dept"] {
+        background:  #FBFCFC    ;
+    }
+      .login-section-agileits select[type="choose"] {
+        background:#FBFCFC ;
+    }
+    /*-- login --*/
+
+    input[type="submit"] {
+        background: #FFC300  ;
+        color: #00549c;
+        font-size: 1em;
+
+        border: 2px solid transparent;
+        width: 85%;
+        outline: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        -webkit-appearance: none;
+        padding: 0.7em 0;
+        font-weight: 600;
+        font-family: 'PT Sans', sans-serif;
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -moz-transition: 0.5s all;
+        -o-transition: 0.5s all;
+        margin-left: 20px;
+    }
+
+    input[type="submit"]:hover {
+        background: #00bcd4;
+        color: #fff;
+    }
+
+   
+
+    h3.form-head {
+        font-size: 1.6em;
+        font-weight: 600;
+        color: #005ba4;
+        margin: 0 0 1em 0;
+        text-transform: capitalize;
+    }
+
+    p.footer-agile,
+    p.footer-agile a {
+        padding: 0 0 2em;
+        color: #fff;
+        font-size: 1em;
+        letter-spacing: 1px;
+    }
+
+    ::-webkit-input-placeholder {
+        color: #17202A  ;
+    }
+
+    :-moz-placeholder {
+        /* Firefox 18- */
+        color: #17202A  ;
+    }
+
+    ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #17202A  ;
+    }
+
+    :-ms-input-placeholder {
+        color: #17202A  ;
+    }
+    /*--responsive--*/
+    /* -- Responsive code -- */
+
+    @media screen and (max-width: 1920px) {
+        .container {
+            margin: 8em auto;
+        }
+        h1.wthree {
+            margin: 2em 0 0;
+        }
+    }
+
+    @media screen and (max-width: 1680px) {
+        .container {
+            margin: 4em auto;
+        }
+    }
+
+    @media screen and (max-width: 1600px) {
+        h1.wthree {
+            margin: 1.5em 0 0;
+        }
+        .container {
+            margin: 3em auto;
+        }
+    }
+
+    @media screen and (max-width: 1280px) {}
+
+    @media screen and (max-width: 1080px) {
+        .login-section-agileits {
+            width: 40%;
+        }
+    }
+
+    @media screen and (max-width: 1050px) {
+        h1.wthree {
+            margin: 1.2em 0 0;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        h1.wthree {
+            font-size: 2.8em;
+        }
+        .wthree-left-txt {
+            padding: 1.7em 2em 2em;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+       
+        .container {
+            width: 62%;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .container {
+            width: 64%;
+        }
+        .login-section-agileits {
+            width: 47%;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .login-section-agileits {
+            width: 50%;
+        }
+        h1.wthree {
+            font-size: 2.7em;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        h1.wthree {
+            font-size: 2.6em;
+        }
+    }
+
+    @media screen and (max-width: 736px) {
+        h1.wthree {
+            font-size: 2.5em;
+        }
+        .login-section-agileits {
+            width: 56%;
+        }
+        h3.form-head {
+            font-size: 1.5em;
+        }
+    }
+
+    @media screen and (max-width: 667px) {
+        .container {
+            width: 71%;
+        }
+        .login-section-agileits {
+            width: 64%;
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .wthree-left-txt {
+            padding: 1.7em 1em;
+        }
+        h1.wthree {
+            font-size: 2.4em;
+        }
+        .login-section-agileits {
+            margin: 2em auto;
+        }
+         .login-section-agileits select[type="choose"],
+         .login-section-agileits input[type="dept"],
+        .login-section-agileits input[type="tel"],
+        .login-section-agileits input[type="text"],
+        .login-section-agileits input[type="password"],
+        .login-section-agileits input[type="email"] {
+            padding: 0.7em 1em;
+        }
+        .w3ls-icon span {
+            padding: 12px;
+            height: 18px;
+        }
+        input[type="submit"] {
+            padding: 0.6em 0;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .container {
+            width: 74%;
+        }
+         .login-section-agileits select[type="choose"],
+         .login-section-agileits input[type="dept"],
+        .login-section-agileits input[type="tel"],
+        .login-section-agileits input[type="text"],
+        .login-section-agileits input[type="password"],
+        .login-section-agileits input[type="email"] {
+            padding: 0.7em 1em;
+        }
+        p.footer-agile {
+            padding: 2em;
+            line-height: 1.7;
+        }
+        h1.wthree {
+            font-size: 2.3em;
+        }
+        .login-section-agileits {
+            margin: 2em auto 1em;
+        }
+        h3.form-head {
+            font-size: 1.3em;
+        }
+    }
+
+    @media screen and (max-width: 568px) {
+        .login-section-agileits {
+            width: 84.2%;
+        }
+        h1.wthree {
+            font-size: 2.2em;
+        }
+        .container {
+            margin: 2em auto;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .login-section-agileits {
+            width: 81.5%;
+        }
+
+        p.footer-agile {
+            padding: 0 2em 2em;
+            line-height: 1.5;
+            font-size: 0.9em;
+        }
+        h1.wthree {
+            font-size: 1.8em;
+        }
+    }
+
+    @media screen and (max-width: 414px) {
+       
+      
+        .login-section-agileits {
+            width: 78%;
+            padding: 2em;
+        }
+    }
+
+    @media screen and (max-width: 384px) {
+      
+    
+        .wthree-left-txt {
+            padding: 1em;
+        }
+         .login-section-agileits select[type="choose"],
+         .login-section-agileits input[type="dept"],
+         .login-section-agileits input[type="tel"],
+        .login-section-agileits input[type="text"],
+        .login-section-agileits input[type="password"],
+        .login-section-agileits input[type="email"] {
+            width: 66.5%;
+        }
+        h3.form-head {
+            font-size: 1.2em;
+        }
+        .login-section-agileits {
+            width: 76.5%;
+        }
+
+    }
+
+    @media screen and (max-width: 375px) {
+        h1.wthree {
+            font-size: 1.7em;
+        }
+        
+        .container {
+            width: 76%;
+        }
+
+        p.footer-agile {
+            font-size: 0.9em;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        h1.wthree {
+            font-size: 1.5em;
+        }
+
+        .container {
+            padding: 1em;
+            width: 83%;
+            margin: 1em auto;
+        }
+
+        .login-section-agileits {
+            width: 86.5%;
+            padding: 2em 1em 3em;
+        }
+         .login-section-agileits select[type="choose"],
+         .login-section-agileits input[type="dept"],
+        .login-section-agileits input[type="tel"],
+        .login-section-agileits input[type="text"],
+        .login-section-agileits input[type="password"],
+        .login-section-agileits input[type="email"] {
+            width: 63.5%;
+        }
+
+        h3.form-head {
+            font-size: 1.1em;
+        }
+
+
+    }

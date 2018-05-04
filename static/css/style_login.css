@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500);
+body {
+  background: #F8C471;
+  text-align: center;
+  width: 100vh;
+}
+
+#window {
+  height: 500px;
+  width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -225px auto 10px -400px;
+  background-color: rgba(5,4,2,0.1);
+  background-size: 100% 100%;
+  box-shadow: 0 0px 50px rgba(0, 0, 0, 0.5);
+}
+#window h1 {
+  font: 200 20px Roboto;
+  margin-top: 30px;
+  color: white;
+}
+
+#modal {
+  width: 460px;
+  margin: 80px auto;
+  padding-top: 20px;
+  background: rgba(255, 255, 255, 0.4);
+}
+#modal form {
+  height: 185px;
+}
+
+.group {
+  position: relative;
+  height: 50px;
+  width: 175px;
+  display: inline-block;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0);
+}
+.group input {
+  color: #fff;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #FFCF2F;
+  border-radius: 0;
+  width: 175px;
+  font: 300 18px Roboto;
+  padding-bottom: 4px;
+  background: rgba(255, 255, 255, 0);
+}
+.group input:focus ~ .bar {
+  border-width: 1px;
+  width: 174px;
+}
+.group input ~ .bar {
+  height: 0px;
+  display: block;
+  border: 0 solid #FFCF2F;
+  position: relative;
+  top: -2px;
+  width: 0;
+  transition: 0.2s ease all;
+}
+
+button {
+  width: 100%;
+  height: 45px;
+  background: #FFCF2F ;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* FAB styling */
+#container {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+}
+#container:hover:after {
+  content: attr(title);
+  position: absolute;
+  right: 110%;
+  top: 16px;
+  white-space: nowrap;
+  background: #585858;
+  padding: 3px 7px;
+  color: white;
+  border-radius: 2px;
+  font: 300 15px Roboto;
+}
+
+#fab {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #3E35B2 url("https://cbwconline.com/IMG/Codepen/Profile.svg") no-repeat center center;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+#fab:hover {
+  background: #3E35B2 url("https://cbwconline.com/IMG/Codepen/Go.svg") no-repeat center center;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}

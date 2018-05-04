@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:line-width="http://www.w3.org/1999/xhtml" xmlns:width="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Departmental Store Management System</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/style_signup.css" rel="stylesheet">
+    <link href="/static/css/style_navbar.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/du_booking_system.css" rel="stylesheet">
+
+    <link href="../static/vendor/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="../static/vendor/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="../static/vendor/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="../static/vendor/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="../static/vendor/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
+    <!-- My custom css for table -->
+    <link href="../static/css/my_custom.css?version=14" rel="stylesheet" type="text/css">
+
+    <!-- Sweetalert Css -->
+    <link href="../static/vendor/sweetalert/sweetalert.css" rel="stylesheet"/>
+
+    <link href="../static/css/floating.css?version=1" rel="stylesheet" type="text/css">
+</head>
+
+<body id="header" style="height: 100%">
+
+<script type="text/javascript">
+    var nav = false;
+
+    function show_hide_nav(id) {
+        var navbar = document.getElementById(id);
+
+        if (nav == false) {
+            navbar.style.display = "block";
+            nav = true;
+        } else {
+            navbar.style.display = "none";
+            nav = false;
+        }
+    }
+</script>
+
+
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" style="color:  white;">Departmental Store Management System</a>
+
+        <div class="topnav" id="navbarResponsive">
+            <div id="res_btn" onclick="show_hide_nav('navbar')"></div>
+            <ul class="nav navbar-nav" id="navbar" style="margin-left: 380px ;color: #004085">
+                <a href="index" class="btn btn-primary" style="width: 120px;height: 40px">Home</a>
+                <a href="product" class="btn btn-primary" style="width: 120px;height: 40px">Update</a>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="btn-group-vertical">
+        {% if session.logged_in %}
+            <a href="logout" class="btn btn-danger navbar-btn">Logout</a>
+        {% else %}
+            <a href="login" class="btn btn-danger navbar-btn">Login</a>
+            <a class="btn btn-warning navbar-btn" href="signup">SignUp</a>
+        {% endif %}
+    </div>
+
+
+</nav>
+<div class="row">
+    <div class="clearfix"></div>
+    <h1></h1>
+</div>
+<div class="row">
+    <div class="clearfix"></div>
+    <h1></h1>
+</div>
+
+<div class="row">
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2></h2>
+                <h2></h2>
+                <h2></h2>
+                <h2>Product Info
+                </h2>
+
+
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Settings 1</a>
+                            </li>
+                            <li><a href="#">Settings 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content" style="margin: 30px">
+
+                <table id="class_info" class="table table-striped table-bordered">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Unit Price</th>
+                        <th>Quantity</th>
+                        <th>Vendor</th>
+                        <th>Edit</th>
+                    </tr>
+                    </thead>
+
+
+                    <tbody>
+                    {% for row in data %}
+                        <tr class="clickable-row">
+                            {% for d in row %}
+                                <td>{{ d }}</td>
+
+                            {% endfor %}
+                            <td>
+                                <a id="edit" class="btn btn-info btn-xs waves-effect"
+                                   data-toggle="modal" data-target="#editModal"
+                                   onclick="edit_row(this)"><i class="fa fa-pencil"></i>
+                                    Edit </a>
+                                <a id="delete" class="btn btn-danger btn-xs waves-effect"
+                                   onclick="delete_row(this)"><i
+                                        class="fa fa-trash-o"></i> Delete
+                                </a>
+                            </td>
+
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="trigger" data-toggle="modal" id="addClassRoomButton"
+     data-target="#addProductModal" title="Add class">
+    +
+</div>
+<div class="modal fade" id="addProductModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <form action="">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Product</h4>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="add_room_name">Name:</label>
+                        <input type="text" class="form-control" id="add_room_name"
+                               name="add_room_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="add_unit_price">Unit Price:</label>
+                        <input type="number" class="form-control" id="add_unit_price"
+                               name="add_unit_price">
+                    </div>
+                    <div class="form-group">
+                        <label for="add_quantity">Quantity:</label>
+                        <input type="number" class="form-control" id="add_quantity"
+                               name="add_quantity">
+                    </div>
+                    <div class="form-group">
+                        <label for="add_vendor">Vendor:</label>
+                        <input type="text" class="form-control" id="add_vendor"
+                               name="add_vendor">
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-default" data-dismiss="modal" id="add_class_btn">Add
+                </button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div class="modal fade" id="editModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <form action="">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Edit Product Info</h4>
+                    </div>
+                    <div class="form-group">
+                        <label for="product_id">ID:</label>
+                        <label id="product_id"></label>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="room_name">Name:</label>
+                        <input type="text" class="form-control" id="room_name"
+                               name="room_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="unit_price">Unit Price:</label>
+                        <input type="number" class="form-control" id="unit_price"
+                               name="unit_price">
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" class="form-control" id="quantity"
+                               name="quantity">
+                    </div>
+                    <div class="form-group">
+                        <label for="vendor">Vendor:</label>
+                        <input type="text" class="form-control" id="vendor"
+                               name="vendor">
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-default" data-dismiss="modal" id="update">Update
+                </button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- jQuery -->
+<script src="../static/vendor/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../static/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="../static/vendor/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="../static/vendor/nprogress/nprogress.js"></script>
+<!-- iCheck -->
+<script src="../static/vendor/iCheck/icheck.min.js"></script>
+<!-- Datatables -->
+
+<script src="../static/vendor/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../static/vendor/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../static/vendor/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../static/vendor/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="../static/vendor/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script src="../static/vendor/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="../static/vendor/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="../static/vendor/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<script src="../static/vendor/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+<script src="../static/vendor/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../static/vendor/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+<script src="../static/vendor/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+<script src="../static/vendor/jszip/dist/jszip.min.js"></script>
+<script src="../static/vendor/pdfmake/build/pdfmake.min.js"></script>
+<script src="../static/vendor/pdfmake/build/vfs_fonts.js"></script>
+
+<!-- Waves Effect Plugin Js -->
+<script src="../static/vendor/node-waves/waves.js"></script>
+
+<!-- SweetAlert Plugin Js -->
+<script src="../static/vendor/sweetalert/sweetalert.min.js"></script>
+
+<!-- Custom Theme Scripts -->
+{#<script src="../static/build/js/custom.min.js"></script>#}
+
+<!-- my custom js file -->
+<script src="../static/js/table_row.js?version=33"></script>
+
+<!-- extra -->
+
+</body>
+
+<!-- Footer -->
+<footer class="py-5 bg-dark" style="margin-top: 600px">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Departmental Store management System</p>
+    </div>
+</footer>
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="../static/vendor/jquery/jquery.min.js"></script>
+<script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+</html>

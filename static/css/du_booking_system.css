@@ -1,0 +1,49 @@
+
+body {
+  padding-top: 50px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 50px;
+  }
+}
+
+.carousel-item {
+  height: 65vh;
+  min-height: 440px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+.container-fluid.navbar-container, .navbar-brand {
+  padding-left: 0;
+}
+.btn-group button {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+   /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 50%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+}
+
+.btn-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #3e8e41;
+}
+#popUpWindow{
+  //background: lightblue;
+}
+
