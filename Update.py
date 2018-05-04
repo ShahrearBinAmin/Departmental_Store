@@ -14,7 +14,7 @@ class ClassUpdate:
         cursor.execute(
             "SELECT * from product")
         data = cursor.fetchall()
-        return render_template('product.html', data=data,user_name=user_name)
+        return render_template('product.html', data=data)
 
     def class_delete(self):
         name = request.args["name"]
